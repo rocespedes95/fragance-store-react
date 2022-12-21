@@ -1,9 +1,10 @@
-import {CardWidget} from "./CardWidget.js";
+
+import CardWidget from "./CardWidget.js"
 
 export const NavBar =() => {
     return(
         <header className="header">
-            <h2>Fragance Store logo</h2>
+            <h2>Fragance Store(logo)</h2>
             <nav className="nav">
                 <li>
                     <a className="link_nav" href="#">Men</a>
@@ -21,10 +22,13 @@ export const NavBar =() => {
                     <a className="link_nav" href="#">Contacto</a>
                 </li>
                 <li>
-                    <a className="link_nav" href="#"><CardWidget/></a>
-                </li>     
+                    <a className="link_nav" href="#">
+                        <CardWidget/>
+                    </a>
+                </li>
             </nav>
         </header>
        
     )
 }
+

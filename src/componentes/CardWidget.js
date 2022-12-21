@@ -1,10 +1,10 @@
-import { NavBar } from "./NavBar"
+import React from "react";
 
 
 export const CardWidget = () => {
     return(
-        <i className="bi bi-cart3">2</i>
+        <i className="bi bi-cart3">4</i>
         )
-}
+} 
 
-export default NavBar;
+export default CardWidget;

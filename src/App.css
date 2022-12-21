@@ -1,4 +1,5 @@
 
+
 .header{
     background-color: #3a5a40;
     border-radius: 12px;
@@ -8,7 +9,7 @@
     margin-left: 20px;
     margin-right: 20px;
     
-   
+
 }
 .logo_header{
     font-size: 42px;
@@ -16,6 +17,12 @@
     
 }
 .nav{
-    justify-content: center;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    text-decoration: none;
+    justify-content: flex-end;
+    margin-right: 20px;
+    
    
 }
