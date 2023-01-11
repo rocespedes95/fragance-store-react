@@ -1,7 +1,11 @@
 
 
+body{
+    background-color: #f4a261;
+}
+
 .header{
-    background-color: #3a5a40;
+    background-color: #2a9d8f;
     border-radius: 12px;
     font-size: 42px;
     gap: 20px;
@@ -22,7 +26,27 @@
     gap: 20px;
     text-decoration: none;
     justify-content: flex-end;
-    margin-right: 20px;
+    margin-right: 20px; 
+}
+.link_nav{ text-decoration: none;
+           
+}
+
+.cardProductos{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    gap: 30px;
     
-   
+    list-style: none;
+}
+.mainHome{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    gap: 30px;
 }

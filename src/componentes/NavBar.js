@@ -1,5 +1,7 @@
-
+import React from "react"
+import { Link } from "react-router-dom"
 import CardWidget from "./CardWidget.js"
+
 
 export const NavBar =() => {
     return(
@@ -7,19 +9,19 @@ export const NavBar =() => {
             <h2>Fragance Store(logo)</h2>
             <nav className="nav">
                 <li>
-                    <a className="link_nav" href="#">Men</a>
+                    <Link className="link_nav" to="/allproducts/hombre">Hombre</Link>
                 </li>
                 <li>
-                    <a className="link_nav" href="#">Women</a>
+                    <Link className="link_nav" to="/allproducts/mujer">Mujer</Link>
                 </li>
                 <li>
-                    <a className="link_nav" href="#">Kid</a>
+                    <Link className="link_nav" to="/allproducts/niños">Niños</Link>
                 </li>
                 <li>
-                    <a className="link_nav" href="#">Ubicacion</a>
+                    <Link className="link_nav" to="/allproducts/Ubicacion">Ubicacion</Link>
                 </li>
                 <li>
-                    <a className="link_nav" href="#">Contacto</a>
+                    <Link className="link_nav" to="/allproducts">Contacto</Link>
                 </li>
                 <li>
                     <a className="link_nav" href="#">
