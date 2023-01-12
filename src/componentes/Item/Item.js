@@ -1,8 +1,7 @@
-
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 
 const Item = ({title,descripcion,categoria,precio,id,rutaimg}) => {
   return (
@@ -24,8 +23,7 @@ const Item = ({title,descripcion,categoria,precio,id,rutaimg}) => {
                    <ListGroup.Item>${precio}</ListGroup.Item>
                  </ListGroup>
                  <Card.Body>
-                   <Card.Link href="#">Ver Mas</Card.Link>
-                   <Card.Link href="#">Añadir a Carrito</Card.Link>
+                 <Button variant="outline-info">Ver Mas</Button>
                  </Card.Body>
                </Card>
                 </div>

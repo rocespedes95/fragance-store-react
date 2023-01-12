@@ -8,7 +8,9 @@ export const NavBar =() => {
         <header className="header">
             <h2>Fragance Store(logo)</h2>
             <nav className="nav">
-                <li>
+                 <li>
+                    <Link className="link_nav" to="/inicio">Inicio</Link>
+                </li><li>
                     <Link className="link_nav" to="/allproducts/hombre">Hombre</Link>
                 </li>
                 <li>
@@ -18,10 +20,7 @@ export const NavBar =() => {
                     <Link className="link_nav" to="/allproducts/niños">Niños</Link>
                 </li>
                 <li>
-                    <Link className="link_nav" to="/allproducts/Ubicacion">Ubicacion</Link>
-                </li>
-                <li>
-                    <Link className="link_nav" to="/allproducts">Contacto</Link>
+                    <Link className="link_nav" to="/allproducts">All Products</Link>
                 </li>
                 <li>
                     <a className="link_nav" href="#">
