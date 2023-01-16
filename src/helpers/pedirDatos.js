@@ -8,3 +8,15 @@ export const pedirDatos=()=>{
 
     })
 }
+
+export const pedirItemPorId = (id)=>{
+    return new Promise ((resolve ,reject)=>{
+        setTimeout(()=>
+        {
+            const item = stock.find((el)=>el.id ===id)
+            
+                resolve(item)
+        },1000
+        )
+    })
+}

@@ -1,30 +1,27 @@
-import { NavBar } from "./componentes/NavBar.js";
+import { NavBar } from "./NavBar/NavBar.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import "./App.css";
 
-import ItemListContainer from "./componentes/ItemListContainer.js";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer.js";
 import Inicio from "./componentes/Inicio/Inicio.js";
+import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer.js";
 
 function App() {
   return (
 
     <BrowserRouter>
-          <NavBar/>
-      <Routes>
 
+          <NavBar/>
+
+      <Routes>
         <Route path = "/" element={ <Inicio/>}  />
         <Route  path="/allproducts" element={ <ItemListContainer/>}/>
         <Route  path="/allproducts/:categoria" element={ <ItemListContainer/>}/>
-        
+        <Route path = "/allproducts/:categoria" element ={<ItemDetailContainer/>}/>
         <Route   path="*" element={ <Navigate to={"/"}  />} />
-
       </Routes>
     
-
-
-      
-
 
     </BrowserRouter>
     

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import CardWidget from "./CardWidget.js"
+import CardWidget from "../componentes/CardWidget/CardWidget.js"
 
 
 export const NavBar =() => {
@@ -24,7 +24,7 @@ export const NavBar =() => {
                 </li>
                 <li>
                     <a className="link_nav" href="#">
-                        <CardWidget/>
+
                     </a>
                 </li>
             </nav>

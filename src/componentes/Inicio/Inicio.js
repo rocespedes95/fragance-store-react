@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar } from '../NavBar'
+import { NavBar } from '../../NavBar/NavBar'
 import alien from "../../imghome/alien.jpg"
 import dolcegabana from "../../imghome/DGdolcegarden.jpg"
 import armani from "../../imghome/fraganciaArmani.jpg"
