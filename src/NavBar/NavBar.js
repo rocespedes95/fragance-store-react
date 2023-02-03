@@ -11,22 +11,16 @@ export const NavBar =() => {
                  <li>
                     <Link className="link_nav" to="/inicio">Inicio</Link>
                 </li><li>
-                    <Link className="link_nav" to="/allproducts/hombre">Hombre</Link>
+                    <Link className="link_nav" to="/productos/hombre">Hombre</Link>
                 </li>
                 <li>
-                    <Link className="link_nav" to="/allproducts/mujer">Mujer</Link>
+                    <Link className="link_nav" to="/productos/mujer">Mujer</Link>
                 </li>
                 <li>
-                    <Link className="link_nav" to="/allproducts/niños">Niños</Link>
+                    <Link className="link_nav" to="/productos/niños">Niños</Link>
                 </li>
-                <li>
-                    <Link className="link_nav" to="/allproducts">All Products</Link>
-                </li>
-                <li>
-                    <a className="link_nav" href="#">
-
-                    </a>
-                </li>
+               
+                
             </nav>
         </header>
        

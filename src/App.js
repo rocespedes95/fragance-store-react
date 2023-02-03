@@ -9,21 +9,17 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 
 function App() {
   return (
-
     <BrowserRouter>
-
-          <NavBar/>
-
-      <Routes>
-        <Route path = "/" element={ <Inicio/>}  />
-        <Route  path="/allproducts" element={ <ItemListContainer/>}/>
-        <Route  path="/allproducts/:categoria" element={ <ItemListContainer/>}/>
-        <Route path = "/allproducts/:categoria" element ={<ItemDetailContainer/>}/>
-        <Route   path="*" element={ <Navigate to={"/"}  />} />
-      </Routes>
-    
+    <NavBar />
+    <Routes>
+      <Route path="/" element={<Inicio/>}/>
+      <Route path="/productos/:categoria" element= {<ItemListContainer/>}/>
+      <Route path= "/detail/:itemId" element={<ItemDetailContainer/>}/>
+      <Route path="*" element={< Navigate to= {"/"}/>}/>
+    </Routes>
 
     </BrowserRouter>
+    
     
   );
 }

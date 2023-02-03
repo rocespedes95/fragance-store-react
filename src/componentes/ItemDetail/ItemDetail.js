@@ -1,10 +1,15 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-
-
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({rutaimg, title, descripcion, categoria, precio}) => {
+     const Navigate = useNavigate()
+    const handleVolver = ()=> {
+        Navigate(-1)
+    }
   return (
     <div>
         <Card style={{ width: '18rem' }}>
@@ -24,7 +29,7 @@ const ItemDetail = ({rutaimg, title, descripcion, categoria, precio}) => {
                    <ListGroup.Item>${precio}</ListGroup.Item>
                  </ListGroup>
                  <Card.Body>
-                 <link variant="outline-info">Ver Mas</link>
+                 <Button variant="warning" onClick={handleVolver}>Volver</Button>
                  </Card.Body>
                </Card>
     </div>

@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import React from 'react'
 import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom';
 
 const Item = ({title,descripcion,categoria,precio,id,rutaimg}) => {
   return (
@@ -20,7 +21,8 @@ const Item = ({title,descripcion,categoria,precio,id,rutaimg}) => {
                    <ListGroup.Item>${precio}</ListGroup.Item>
                  </ListGroup>
                  <Card.Body>
-                 <Button variant="outline-info">Ver Mas</Button>
+                 
+                <Link to = { `/detail/${id} ` } className="btn btn-outline-primary" >Ver Mas</Link>
                  </Card.Body>
                </Card>
                 </div>

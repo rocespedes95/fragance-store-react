@@ -13,7 +13,7 @@ const ItemListContainer = () => {
         pedirDatos()
         .then( (res)=>{
             if (categoria){
-                setProductos(res.filter(prod => prod.categoria=== categoria))
+                setProductos(res.filter(prod => prod.categoria === categoria))
             }
             else {
                 setProductos(res)
