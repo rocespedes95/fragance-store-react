@@ -2,14 +2,30 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({rutaimg, title, descripcion, categoria, precio}) => {
-     const Navigate = useNavigate()
-    const handleVolver = ()=> {
+const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id}) => {
+  const [cantidad , setCantidad]= useState(1)
+  
+  const Navigate = useNavigate()
+    
+  const handleVolver = () => {
         Navigate(-1)
     }
+  const handleAgregar = () => {
+      console.log({
+        id,
+        title,
+        stock,
+        rutaimg,
+        categoria,
+        descripcion,
+        precio,
+        cantidad,
+      })
+   }
+
   return (
     <div>
         <Card style={{ width: '18rem' }}>
@@ -29,7 +45,12 @@ const ItemDetail = ({rutaimg, title, descripcion, categoria, precio}) => {
                    <ListGroup.Item>${precio}</ListGroup.Item>
                  </ListGroup>
                  <Card.Body>
-                 <Button variant="warning" onClick={handleVolver}>Volver</Button>
+                 <Button variant="warning" className='botonVolver' onClick={handleVolver}>Volver</Button>
+                 <ItemCount 
+                 cantidad={cantidad}
+                 max = {stock}
+                 setCantidad={setCantidad}
+                 />
                  </Card.Body>
                </Card>
     </div>

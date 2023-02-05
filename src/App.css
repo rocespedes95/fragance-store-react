@@ -47,14 +47,24 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    margin-left: 60px;
-    gap: 30px;
+    margin-left: 200px;
+    gap: 100px;
 }
 .oneProduct{
     margin-top: 30px;
-    
     margin-bottom: 30px;
-    margin-left: 700px;
-    gap: 30px;
-
+    margin-left: 780px;
+}
+.butonCount{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 65px;
+    gap: 40px
+}
+.botonVolver{
+    margin-left: 80px;
+}
+.botonAgregarCarrito{
+    margin-top: 20px;
+    margin-left: -19px;
 }

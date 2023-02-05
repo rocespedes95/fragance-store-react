@@ -13,7 +13,7 @@ const Inicio = () => {
   
   <div className='mainHome'>
          <div >
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '40rem' }}>
       <Card.Img variant="top" src={alien} />
       <Card.Body>
         <Card.Title>Mugler Alien</Card.Title>
@@ -25,7 +25,7 @@ const Inicio = () => {
     </Card>
         </div>
         <div>
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '40rem' }}>
       <Card.Img variant="top" src={dolcegabana} />
       <Card.Body>
         <Card.Title>Dolce&Gabbana Dolce Garden</Card.Title>
@@ -37,7 +37,7 @@ const Inicio = () => {
     </Card>
         </div>
         <div>
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '40rem' }}>
       <Card.Img variant="top" src={armani} />
       <Card.Body>
         <Card.Title>Armani Si Intense</Card.Title>
@@ -49,7 +49,7 @@ const Inicio = () => {
     </Card>
         </div>
         <div>
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '40rem' }}>
       <Card.Img variant="top" src={hugoboss} />
       <Card.Body>
         <Card.Title>Hugo Boss The Scent for her</Card.Title>

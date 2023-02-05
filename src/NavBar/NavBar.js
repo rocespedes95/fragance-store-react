@@ -6,7 +6,7 @@ import CardWidget from "../componentes/CardWidget/CardWidget.js"
 export const NavBar =() => {
     return(
         <header className="header">
-            <h2>Fragance Store(logo)</h2>
+            <h2>Fragance Store</h2>
             <nav className="nav">
                  <li>
                     <Link className="link_nav" to="/inicio">Inicio</Link>
