@@ -1,8 +1,8 @@
 import Button from 'react-bootstrap/Button';
 
-import React, { useState } from 'react'
 
-const ItemCount = ({max,cantidad, setCantidad}) => {
+
+const ItemCount = ({max,cantidad, setCantidad,onAdd}) => {
     
         const handleRestar = () => {
             cantidad > 1 && setCantidad (cantidad - 1)
@@ -19,7 +19,7 @@ const ItemCount = ({max,cantidad, setCantidad}) => {
         <span>     {cantidad}     </span>
         <Button  onClick ={handleSumar} variant="success" className='buton+' >+</Button>
 
-        
+        <Button onClick={onAdd} variant="danger">Agregar al Carrito</Button>    
 
     </div>
   )

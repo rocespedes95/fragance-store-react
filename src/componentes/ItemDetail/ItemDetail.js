@@ -50,6 +50,7 @@ const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id})
                  cantidad={cantidad}
                  max = {stock}
                  setCantidad={setCantidad}
+                 onAdd = {handleAgregar}
                  />
                  </Card.Body>
                </Card>
