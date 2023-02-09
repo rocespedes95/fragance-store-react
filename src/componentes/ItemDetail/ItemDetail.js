@@ -1,20 +1,22 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../context/CartContext';
 
 const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id}) => {
+  const { agregarAlCarrito, isInCart} = useContext (CartContext)
+     
   const [cantidad , setCantidad]= useState(1)
-  
   const Navigate = useNavigate()
     
   const handleVolver = () => {
         Navigate(-1)
     }
   const handleAgregar = () => {
-      console.log({
+      const itemCart = {
         id,
         title,
         stock,
@@ -23,7 +25,9 @@ const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id})
         descripcion,
         precio,
         cantidad,
-      })
+      }
+     agregarAlCarrito(itemCart)
+    
    }
 
   return (
@@ -46,12 +50,17 @@ const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id})
                  </ListGroup>
                  <Card.Body>
                  <Button variant="warning" className='botonVolver' onClick={handleVolver}>Volver</Button>
-                 <ItemCount 
-                 cantidad={cantidad}
-                 max = {stock}
-                 setCantidad={setCantidad}
-                 onAdd = {handleAgregar}
-                 />
+                 {
+                    !isInCart(id)
+                       ? <ItemCount 
+                       cantidad={cantidad}
+                       max = {stock}
+                       setCantidad={setCantidad}
+                       onAdd = {handleAgregar}
+                       />
+                       : <Link to="/cart" className='btn btn-success'>Terminar mi compra</Link>
+                 }
+                 
                  </Card.Body>
                </Card>
     </div>
