@@ -1,9 +1,17 @@
-import React from "react";
 
+import {FaShoppingCart} from "react-icons/fa"
+import { Link } from "react-router-dom";
+import {  useCartContext } from "../context/CartContext";
 
 export const CardWidget = () => {
+    const  {totalCantidad} = useCartContext()
     return(
-        <i className="bi bi-cart3">3</i>
+        <Link to ="/cart">
+            <FaShoppingCart/>
+          <span>{totalCantidad()}</span>
+
+        </Link>
+        
         )
 } 
 

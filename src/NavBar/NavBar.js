@@ -10,7 +10,8 @@ export const NavBar =() => {
             <nav className="nav">
                  <li>
                     <Link className="link_nav" to="/inicio">Inicio</Link>
-                </li><li>
+                </li>
+                <li>
                     <Link className="link_nav" to="/productos/hombre">Hombre</Link>
                 </li>
                 <li>
@@ -19,7 +20,7 @@ export const NavBar =() => {
                 <li>
                     <Link className="link_nav" to="/productos/niños">Niños</Link>
                 </li>
-               
+               <CardWidget/>
                 
             </nav>
         </header>

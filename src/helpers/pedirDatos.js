@@ -22,7 +22,7 @@ export const pedirItemPorId = (id)=> {
                     error :"No se encontro el producto solicitado "
                 } )
             }    
-        }, 1500)
+        }, 1000)
         
     })
     

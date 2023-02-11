@@ -2,12 +2,12 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useContext, useState } from 'react'
+import React, {  useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from '../context/CartContext';
+import {  useCartContext } from '../context/CartContext';
 
 const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id}) => {
-  const { agregarAlCarrito, isInCart} = useContext (CartContext)
+  const { agregarAlCarrito, isInCart} = useCartContext()
      
   const [cantidad , setCantidad]= useState(1)
   const Navigate = useNavigate()
