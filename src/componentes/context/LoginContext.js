@@ -23,11 +23,11 @@ export const useLoginContext = () => {
 export const LoginProvider = ({children}) => {
      const[loading ,setLoading]= useState(false)
     const [user, setUser] = useState({
-        email: "cliente@malaonda.com",
-        logged: true,
+        email: null,
+        logged: false,
         error: null,
     })
-    console.log(user)
+    console.log(user) //borrar esto
     const login =(values)=> {
         setLoading(true)
         setTimeout(()=>{

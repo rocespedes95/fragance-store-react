@@ -35,14 +35,18 @@ const LogingScreen = () => {
                     name = "email"
                     />
                     <input 
-                    className= "form-control my-4"  
-                    type ="password"
-                    value ={values.password}
-                    onChange= {handleImputChange}
-                    name ="password"
+                        className= "form-control my-4"  
+                        type ="password"
+                        value ={values.password}
+                        onChange= {handleImputChange}
+                        name ="password"
                     />
 
-                    <button className="btn btn-warning " disabled={loading}>{loading ? "Cargando" : "Ingresar"}</button>
+                    <button 
+                      className="btn btn-warning "
+                      disabled={loading}>
+                        {loading ? "Cargando" : "Ingresar"}
+                    </button>
 
                     {user.error && <p className="error">{user.error}</p>}
                     

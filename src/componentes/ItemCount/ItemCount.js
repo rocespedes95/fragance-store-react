@@ -15,21 +15,19 @@ const ItemCount = ({max,cantidad, setCantidad,onAdd}) => {
 
   return (
     <div className='butonCount'>
-         <Button 
-            
-            onClick={handleRestar}
-            variant={ cantidad > 1 ? "success" : "outline-danger" } 
-            className='buton-'
-            disabled={cantidad === 1}
-            >
-             -
-         </Button>
+          <Button 
+              
+              onClick={handleRestar}
+              variant={ cantidad > 1 ? "success" : "outline-danger" } 
+              disabled={cantidad === 1}
+              >
+              -
+          </Button>
         <span>     {cantidad}     </span>
           <Button  
               onClick ={handleSumar} 
               variant={cantidad < max ? "success" : "outline-danger"}
-              className='buton+'
-              disabled = {cantidad === max}
+              disabled = {cantidad === Number(max)}
               >
               +
             </Button>
