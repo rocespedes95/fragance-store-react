@@ -1,7 +1,5 @@
 import {   createContext, useContext, useState } from "react";
 
-
-
 const MOCK_USUARIOS = [
     {
         email: "cliente@copado.com",
@@ -17,30 +15,30 @@ const MOCK_USUARIOS = [
     }
 ]
 
-
-
 export const LoginContext = createContext()
 
 export const useLoginContext = () => {
     return useContext(LoginContext)
 }
-
 export const LoginProvider = ({children}) => {
-     
+     const[loading ,setLoading]= useState(false)
     const [user, setUser] = useState({
-        email: null,
-        logged: false,
+        email: "cliente@malaonda.com",
+        logged: true,
         error: null,
     })
     console.log(user)
     const login =(values)=> {
-      const match = MOCK_USUARIOS.find(user => user.email === values.email)
+        setLoading(true)
+        setTimeout(()=>{
+            const match = MOCK_USUARIOS.find(user => user.email === values.email)
             if(!match){
                 setUser({
                     email: null,
                     logged: false,
                     error:"No se encuentra ese usuario" 
                 })
+                setLoading(false)
                 return
             }
             if (match.password === values.password){
@@ -57,6 +55,9 @@ export const LoginProvider = ({children}) => {
                     error:"Password incorrecto" 
                 })
             } 
+            setLoading(false)
+        },1500)
+      
     }
     const logout = ()=> {
         setUser( {
@@ -68,7 +69,7 @@ export const LoginProvider = ({children}) => {
     }
     return (
          
-        <LoginContext.Provider value={{user, login, logout}} >
+        <LoginContext.Provider value={{user, login, logout,loading}} >
             {children}
         </LoginContext.Provider>
 

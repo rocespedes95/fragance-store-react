@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import CardWidget from "../componentes/CardWidget/CardWidget.js"
+import { useCartContext } from "../componentes/context/CartContext.js"
 import { useLoginContext } from "../componentes/context/LoginContext.js"
 
 
 export const NavBar =() => {
     const{ user , logout }= useLoginContext()
+    const {cart}= useCartContext()
     return(
         <header className="header">
             <h2 className="tituloPrincipal">Fragance Store</h2>
@@ -22,7 +24,7 @@ export const NavBar =() => {
                         <li>
                              <Link className="link_nav" to="/productos/niños">Niños</Link>
                         </li>
-               <CardWidget/>
+                {cart.length > 0 && <CardWidget/>  }
                 
             </nav>
             <div className="headerContainer">

@@ -2,10 +2,8 @@ import {  useState } from "react"
 import {  useLoginContext } from "../context/LoginContext"
 
 
-
-
 const LogingScreen = () => {
-    const {login, user}= useLoginContext()
+    const {login, user, loading}= useLoginContext()
 
     const [values, setValues]= useState ({
         email: "",
@@ -44,7 +42,7 @@ const LogingScreen = () => {
                     name ="password"
                     />
 
-                    <button className="btn btn-warning ">INGRESAR</button>
+                    <button className="btn btn-warning " disabled={loading}>{loading ? "Cargando" : "Ingresar"}</button>
 
                     {user.error && <p className="error">{user.error}</p>}
                     

@@ -46,7 +46,8 @@ const ItemDetail = ({rutaimg, title, descripcion, categoria, precio, stock ,id})
                  </Card.Body>
                  <ListGroup className="list-group-flush">
                    
-                   <ListGroup.Item>${precio}</ListGroup.Item>
+                    <ListGroup.Item>${precio}</ListGroup.Item>
+                   
                  </ListGroup>
                  <Card.Body>
                  <Button variant="warning" className='botonVolver' onClick={handleVolver}>Volver</Button>
