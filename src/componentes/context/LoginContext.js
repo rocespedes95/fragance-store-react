@@ -27,7 +27,7 @@ export const LoginProvider = ({children}) => {
         logged: false,
         error: null,
     })
-    console.log(user) //borrar esto
+    
     const login =(values)=> {
         setLoading(true)
         setTimeout(()=>{
