@@ -7,6 +7,7 @@ export const LoginContext = createContext()
 export const useLoginContext = () => {
     return useContext(LoginContext)
 }
+
 export const LoginProvider = ({children}) => {
     const[loading ,setLoading]= useState(false)
     const [user, setUser] = useState({
@@ -37,13 +38,12 @@ export const LoginProvider = ({children}) => {
                 logged: false,
                 error: null,
             })
-          } )  
-    }
+         })
+            
+    }   
     const register = (values) => {
             setLoading(true)
-
             createUserWithEmailAndPassword(auth, values.email , values.password)
-        
                 .catch((error) => {
                     console.log(error)
                     setUser({
@@ -54,8 +54,8 @@ export const LoginProvider = ({children}) => {
                 })
                 .finally( ()=> setLoading(false) )
     }
-    useEffect(()=>{
-        onAuthStateChanged(auth , ()=> {
+    useEffect( () => {
+        onAuthStateChanged(auth , (user)=> {
             if (user){
                 setUser({
                     email: user.email,
