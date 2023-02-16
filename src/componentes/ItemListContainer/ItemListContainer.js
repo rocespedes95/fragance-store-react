@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     console.log (productos)
     useEffect(()=>{
         setLoading(true)
-        const productosRef= collection(db ,"productos")
+        const productosRef= collection(db ,"productosfirebase")
         getDocs(productosRef)
           .then((resp) =>{
             setProductos((resp.docs).map( (doc) => {
