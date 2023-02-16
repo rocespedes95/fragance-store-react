@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import {  useLoginContext } from "../context/LoginContext"
 
 
-const LogingScreen = () => {
-    const {login, user, loading}= useLoginContext()
+const RegisterScreen = () => {
+    const { user, loading,register}= useLoginContext()
 
     const [values, setValues]= useState ({
         email: "",
@@ -19,12 +19,12 @@ const LogingScreen = () => {
         })}
     const handleSubmit = (e)=>{
                 e.preventDefault()
-            login(values)
+            register(values)
     }
      return (
             <div className="login-screen">
                 <div className="login">
-                <h2 className="titulo-login">Login</h2>
+                <h2 className="titulo-login">Register</h2>
                 <hr/>
                 <form  onSubmit={handleSubmit} >
 
@@ -52,10 +52,10 @@ const LogingScreen = () => {
                     {user.error && <p className="error">{user.error}</p>}
                     
                 </form>
-                <Link to= "/register" className="btn btn-warning btnRegistrarme">Registrarme</Link>
+                <Link to="/login" className="btn btn-success btnRegistrado">Ya estoy registrado</Link>
                 </div>    
             </div>
         )
 }
 
-export default LogingScreen
+export default RegisterScreen

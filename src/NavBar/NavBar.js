@@ -27,7 +27,7 @@ export const NavBar =() => {
                 
             </nav>
             <div className="headerContainer">
-                <p className="bienvenidaText">Bienvenido { user.email }</p>
+                <p className="bienvenidaText">Bienvenido: { user.email }</p>
                 <button className="btn btn-danger botonLogout" onClick={logout} >logout</button>
              
             </div>
