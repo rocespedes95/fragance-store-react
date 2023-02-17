@@ -110,3 +110,10 @@ body{
 .btnRegistrarme{
     margin-top: 20px;
 }
+
+/*vista de checkout*/
+.imputForm{
+    width: 700px;
+    height: 40px;
+    
+}
